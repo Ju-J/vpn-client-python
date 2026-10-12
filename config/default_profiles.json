@@ -1,0 +1,38 @@
+{
+  "profiles": [
+    {
+      "id": "wg-demo",
+      "name": "WireGuard Demo",
+      "protocol": "wireguard",
+      "endpoint": {
+        "host": "example.com",
+        "port": 51820,
+        "protocol": "udp"
+      },
+      "dns": "1.1.1.1",
+      "mtu": 1420,
+      "allowed_ips": ["0.0.0.0/0"],
+      "auto_connect": false,
+      "reconnect_policy": "manual",
+      "kill_switch": true,
+      "metadata": {}
+    },
+    {
+      "id": "ssh-demo",
+      "name": "SSH Tunnel Demo",
+      "protocol": "ssh",
+      "endpoint": {
+        "host": "example.com",
+        "port": 22,
+        "protocol": "tcp"
+      },
+      "dns": "8.8.8.8",
+      "mtu": null,
+      "allowed_ips": ["10.0.0.0/8"],
+      "auto_connect": false,
+      "reconnect_policy": "manual",
+      "kill_switch": false,
+      "metadata": {}
+    }
+  ]
+}
