@@ -24,3 +24,7 @@ class TrayIcon:
 
     def set_tooltip(self, text: str) -> None:
         self.logger.info("tray_tooltip", tooltip=text)
+
+    def refresh(self) -> None:
+        state = self.manager.status.value if self.manager.status else "disconnected"
+        self.set_tooltip(f"VPN Connection: {state}")

@@ -41,3 +41,6 @@ class AppRuntime:
 
     def health_check(self) -> bool:
         return self.manager.health_check()
+
+    def status(self):
+        return self.manager.status
